@@ -1,5 +1,4 @@
 # Read-Only Policy
-
 resource "aws_ssoadmin_managed_policy_attachment" "read_only_access" {
   instance_arn = tolist(data.aws_ssoadmin_instances.main.arns)[0]
   managed_policy_arn = "arn:aws:iam::aws:policy/ReadOnlyAccess"
