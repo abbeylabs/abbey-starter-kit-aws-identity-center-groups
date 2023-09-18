@@ -46,7 +46,7 @@ resource "aws_ssoadmin_account_assignment" "prod_access_prod" {
   target_type = "AWS_ACCOUNT"
 }
 
-# Give PRod Access Full Compute Access to Prod
+# Give Prod Access Full Compute Access to Prod
 resource "aws_ssoadmin_account_assignment" "prod_access_prod" {
   instance_arn       = tolist(data.aws_ssoadmin_instances.main.arns)[0]
   permission_set_arn = aws_ssoadmin_permission_set.compute_full_access.arn
